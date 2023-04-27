@@ -1,0 +1,341 @@
+:root {
+    --firstColor: #08526d;
+    --secondColor: #ec1c23;
+    --sectionColor: #F0F5F7;
+}
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+.intro-heading {
+    font-size: 50px;
+}
+.section-desc {
+    width: 80%;
+}
+
+.upper-bar {
+    background-color: var(--firstColor);
+}
+.upper-bar span {
+    color: #bfc6c9;
+}
+.upper-bar span svg,
+.upper-bar .left span:nth-child(2) {
+    color: white;
+}
+.upper-bar .right .get-quote {
+    border: 1px solid var(--secondColor);
+    padding: 5px 20px;
+    margin-left: 20px;
+    display: inline-block;
+}
+@media (max-width: 576px) {
+    .upper-bar .get-quote {
+        border: none !important;
+        margin-left: 5px !important;
+    }
+}
+.navbar-brand span {
+    font-size: 30px;
+}
+.navbar-brand span:first-child {
+    font-weight: bold;
+    color: var(--firstColor);
+}
+.navbar-brand span:last-child {
+    color: var(--secondColor);
+}
+.navbar-nav .nav-link {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+.navbar-nav .nav-link.active {
+    color: var(--secondColor) !important;
+}
+
+
+#slider .carousel-inner .carousel-item {
+    height: calc(100vh - 139px);
+    background-size: cover;
+}
+#slider .carousel-inner .carousel-item:first-child {
+    background-image: url(../Images/slider01.jpg);
+}
+#slider .carousel-inner .carousel-item:nth-child(2) {
+    background-image: url(../Images/slider02.jpg);
+}
+#slider .carousel-inner .carousel-item:last-child {
+    background-image: url(../Images/slider03.jpg);
+}
+#slider .carousel-inner::after {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000000b0;
+}
+#slider .heading {
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 60px;
+    font-weight: bold;
+}
+@media (max-width: 576px) {
+    #slider .heading {
+        font-size: 40px;
+    }
+}
+#slider .heading span {
+    padding: 0px 25px 5px;
+    position: relative;
+    display: inline-block;
+}
+#slider .heading span:not(.bottom-left, .bottom-right)::before {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 0;
+    border-top: 2px solid var(--secondColor);
+    border-left: 2px solid var(--secondColor);
+    left: 0;
+}
+#slider .heading span:not(.bottom-left, .bottom-right)::after {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: 0;
+    border-top: 2px solid var(--secondColor);
+    border-right: 2px solid var(--secondColor);
+    right: 0;
+}
+#slider .heading span .bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid var(--secondColor);
+    border-left: 2px solid var(--secondColor);
+    padding: 0;
+    height: 15px;
+    width: 15px;
+}
+#slider .heading span .bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid var(--secondColor);
+    border-right: 2px solid var(--secondColor);
+    padding: 0;
+    height: 15px;
+    width: 15px;
+}
+
+.features .container svg {
+    background-color: var(--secondColor);
+    height: 35px;
+    width: 35px;
+}
+.features .container h3 {
+    color: var(--firstColor);
+}
+
+.overview {
+    background-color: var(--sectionColor);
+}
+.overview .container span {
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.overview .container a {
+    background-color: var(--secondColor);
+    transition: 0.3s;
+}
+.overview .container a:hover {
+    background-color: black;
+}
+
+.featured-work ul li {
+    padding: 10px 25px;
+    border: 2px solid var(--firstColor);
+    color: var(--firstColor);
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+.featured-work ul li.active ,
+.featured-work ul li:hover {
+    background-color: var(--secondColor);
+    color: white;
+    border-color: var(--secondColor);
+}
+.featured-work .row div {
+    padding: 0;
+    transition: 0.3s;
+}
+.featured-work .row div img {
+    width: 100%;
+}
+
+
+.latest-posts .card .card-body h5 {
+    color: var(--firstColor);
+}
+.latest-posts .card .card-body p {
+    margin-bottom: 10px;
+}
+.latest-posts .card .card-body .card-link {
+    color: var(--secondColor);
+}
+
+.testimonials {
+    position: relative;
+    background-image: url(../Images/testimonial.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.testimonials .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    left: 0;
+    top: 0;
+}
+#testimonials .carousel-item {
+    height: 75vh;
+}
+#testimonials .carousel-item .carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pricing {
+    background-color: #F7F7F7;
+}
+.pricing .card-body {
+    padding: 0;
+}
+.pricing .card-body h5 {
+    color: var(--firstColor);
+}
+.pricing .card-body p {
+    background-color: #F7F7F7;
+    color: var(--firstColor);
+}
+.pricing .card-body ul li {
+    border: none;
+    padding: 15px;
+}
+.pricing .card-body a {
+    background-color: var(--secondColor);
+    transition: 0.3s;
+}
+.pricing .card-body a:hover {
+    background-color: black;
+}
+
+.pricing .corporate {
+    position: relative;
+    top: -25px;
+}
+.pricing .corporate p {
+    background-color: var(--secondColor);
+}
+.pricing .corporate a {
+    background-color: var(--firstColor);
+}
+@media (max-width: 992px) {
+    .pricing .corporate {
+        top: 0;
+    }
+}
+.choose-us .info {
+    padding: 50px 25px;
+    background-color: var(--firstColor);
+}
+.choose-us .info a {
+    background-color: var(--secondColor);
+    transition: 0.3s;
+}
+.choose-us .info a:hover {
+    background-color: black;
+}
+
+.stats svg {
+    color: var(--firstColor);
+}
+.stats h1 {
+    color: var(--firstColor);
+    font-size: 50px;
+}
+.stats span {
+    color: var(--secondColor);
+}
+
+.contact-us {
+    background-color: var(--secondColor);
+}
+
+.footer .info h2 {
+    font-size: 50px;
+}
+.footer .info h2 span:first-child {
+    color: var(--firstColor);
+}
+.footer .info h2 span:last-child {
+    color: var(--secondColor);
+}
+.footer .info a {
+    color: var(--firstColor);
+    position: relative;
+    transition: 0.3s;
+} 
+.footer .info a:hover {
+    text-decoration: underline !important;
+}
+.footer .info a::before {
+    content: "\f138";
+    font-family: "fontawesome";
+    margin-right: 5px;
+    display: inline-block;
+}
+.footer .links h2,
+.footer .contacts h2 {
+    color: var(--firstColor);
+}
+.footer .links ul li {
+    margin-bottom: 5px;
+}
+.footer .links ul li a {
+    text-decoration: none;
+    transition: 0.3s;
+    color: black;
+    position: relative;
+}
+.footer .links ul li a:hover {
+    text-decoration: underline;
+}
+.footer .links ul li a::before {
+    font-family: "fontawesome";
+    content: "\f054";
+    font-size: 15px;
+    color: var(--firstColor);
+    display: inline-block;
+    margin-right: 5px;
+}
+.footer .contacts ul li {
+    margin-bottom: 35px;
+    font-size: 15px;
+}
+
+.copyright ul li a svg {
+    color: #777;
+}
